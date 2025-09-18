@@ -9,7 +9,7 @@ export default function LanguageSwitcher() {
   const nextLocale = locale === 'en' ? 'hu' : 'en';
 
   return (
-    <Link href={`/${nextLocale}`} prefetch className='text-current no-underline hover:no-underline text-xl m-4 flex gap-2 items-center'>
+    <Link href={`/${nextLocale}`} prefetch className='no-underline hover:no-underline text-xl flex gap-2 items-center text-white bg-black px-4 py-2 rounded-lg'>
       {locale === 'en' ? 'EN' : 'HU'}
       <LanguageOutlinedIcon/>
     </Link>

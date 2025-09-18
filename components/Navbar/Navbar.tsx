@@ -5,7 +5,7 @@ import LanguageSwitcher from './LanguageSwitcher'
 const Navbar = () => {
 
   return (
-    <nav className='w-full flex items-center justify-between'>
+    <nav className='w-full flex items-center justify-between max-w-7xl mx-auto'>
         <Image 
           src="/logo.png" 
           alt="Webshop Logo" 

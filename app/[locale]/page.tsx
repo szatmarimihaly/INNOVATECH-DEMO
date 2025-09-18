@@ -2,6 +2,7 @@
 import { getTranslations } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import Navbar from '@/components/Navbar/Navbar';
+import PageTitle from '@/components/PageTitle/PageTitle';
 
 type Locale = (typeof routing.locales)[number];
 
@@ -12,7 +13,7 @@ export default async function Page({ params }: { params: { locale: Locale } }) {
   return (
     <main>
       <Navbar />
-      <h1>{t('activeLanguage')}</h1>
+      <PageTitle text={t('fitting')}/>
     </main>
   );
 }
