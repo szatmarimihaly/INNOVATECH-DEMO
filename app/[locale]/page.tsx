@@ -1,7 +1,7 @@
 // app/[locale]/page.tsx
 import { getTranslations } from 'next-intl/server';
-import LanguageSwitcher from '@/components/LanguageSwitcher';
 import { routing } from '@/i18n/routing';
+import Navbar from '@/components/Navbar/Navbar';
 
 type Locale = (typeof routing.locales)[number];
 
@@ -11,8 +11,8 @@ export default async function Page({ params }: { params: { locale: Locale } }) {
 
   return (
     <main>
+      <Navbar />
       <h1>{t('activeLanguage')}</h1>
-      <LanguageSwitcher />
     </main>
   );
 }

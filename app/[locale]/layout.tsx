@@ -1,7 +1,14 @@
-import { NextIntlClientProvider } from 'next-intl';
-import { notFound } from 'next/navigation';
-import { routing } from '@/i18n/routing';
-import type { ReactNode } from 'react';
+import { NextIntlClientProvider } from 'next-intl'
+import { notFound } from 'next/navigation'
+import { routing } from '@/i18n/routing'
+import type { ReactNode } from 'react'
+import { Poppins } from 'next/font/google'
+import '../globals.css'
+
+const poppins  = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+})
 
 type Locale = (typeof routing.locales)[number];
 
@@ -22,7 +29,7 @@ export default async function LocaleLayout({
   const messages = (await import(`../../messages/${locale}.json`)).default;
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className={poppins.className}>
       <body>
         <NextIntlClientProvider locale={locale as Locale} messages={messages}>
           {children}
