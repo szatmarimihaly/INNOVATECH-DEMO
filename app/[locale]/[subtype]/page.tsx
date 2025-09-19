@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 // Page async komponens
 type Props = { params: { locale: string; subtype: string } }
 
-const Page = async ({ params }: Props) => {
+export default async function Page({ params }: Props) {
   const { locale, subtype } = await Promise.resolve(params)
 
   const t = await getTranslations({ locale }) // ✅ itt is await!
@@ -57,5 +57,3 @@ const Page = async ({ params }: Props) => {
     </main>
   )
 }
-
-export default Page
