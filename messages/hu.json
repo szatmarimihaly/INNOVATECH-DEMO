@@ -1,3 +1,12 @@
 {
-  "fitting" : "Szerelvények"
+  "fitting" : "Szerelvények",
+  "products" : "Termékeink",
+  "bolt" : "Csavar",
+  "gasket" : "Tömítés",
+  
+  "valve" : "Pillangó szelepek",
+
+  "desponiabev" : "Desponia pillangószelep EPDM tömítéssel, rilsan bevonatos tányérral",
+  "desponiasav" : "Desponia pillangószelep EPDM tömítéssel, saválló tányérral",
+  "desponiaivo" : "Desponia pillangószelep ivóvizes EPDM tömítéssel, saválló tányérral"
 }
