@@ -2,6 +2,7 @@ import React from 'react'
 import { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import PageTitleLong from '@/components/PageTitle/PageTitleLong'
+import PartNumberSearch from '@/components/Search/PartNumberSearch'
 
 type Params = {params : {locale: string, subtype: string, partnumber: string}}
 
@@ -26,7 +27,10 @@ const Page = async({ params } : Props) => {
   
 
   return (
-    <PageTitleLong text={translatedPartnumber}/>
+    <main>
+      <PageTitleLong text={translatedPartnumber}/>
+      <PartNumberSearch placeText={t('searchHolder')}/>
+    </main>
   )
 }
 

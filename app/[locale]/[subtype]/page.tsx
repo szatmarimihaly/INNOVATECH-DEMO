@@ -41,7 +41,6 @@ const Page = async ({ params }: Props) => {
     .from('product_subtypes')
     .select('id, name, slug')
     .eq('type_id', productType.id)
-    .order('name')
 
   if (subError) return <p>Hiba történt az alkategóriák lekérésekor</p>
 
