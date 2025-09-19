@@ -28,7 +28,7 @@ const ProductListItems = ({ items, parentSlug, typeSlug, locale }: Props) => {
             className="flex items-center justify-between p-4 border-2 rounded-lg shadow-xl"
           >
             <span className="text-xl font-bold">{item.item_number}</span>
-            <LinkButton href={`/${locale}=${typeSlug}/${parentSlug}/${item.slug}`}>
+            <LinkButton href={`/${locale}/${typeSlug}/${parentSlug}/${encodeURIComponent(item.slug)}`}>
               <ArrowForwardIosOutlinedIcon />
             </LinkButton>
           </div>
