@@ -8,7 +8,7 @@ type Params = { params: { locale: string; subtype: string } }
 
 // generateMetadata async, fordító itt
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
-  const { locale, subtype } = params
+  const { locale, subtype } = await Promise.resolve(params)
   const t = await getTranslations({ locale }) // ✅ await!
   const translatedSubname = t(subtype)
 
@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 type Props = { params: { locale: string; subtype: string } }
 
 const Page = async ({ params }: Props) => {
-  const { locale, subtype } = params
+  const { locale, subtype } = await Promise.resolve(params)
 
   const t = await getTranslations({ locale }) // ✅ itt is await!
   const translatedSubname = t(subtype)
